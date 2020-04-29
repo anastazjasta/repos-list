@@ -1,2 +1,9 @@
-# repos-list
-Script downloading list of public repositories on GitHub
+# wtf-gulp-starter
+
+`npm install -g gulp-cli`
+
+`npm install`
+
+`gulp`
+
+To publish your page using github pages use `npm run deploy`
