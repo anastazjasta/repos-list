@@ -6,7 +6,11 @@ fetch('https://api.github.com/users/anastazjasta/repos')
   .then(resp => {
     const repos = resp;
   for (const repo of repos) {
-    list.innerHTML += `<li><a href="${repo.html_url}">${repo.name}</a></li>`;
+    const {html_url, name} = repo;
+    list.innerHTML += 
+    `<li class="list__item">
+      <a href="${html_url}">${name}</a>
+    </li>`;
   }
   }) 
 .catch (err => {
