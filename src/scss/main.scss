@@ -1,5 +1,6 @@
 @import "_normalize";
 @import "_variables";
+@import url("https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap");
 
 
 html {
@@ -11,6 +12,39 @@ html {
 }
 
 body {
-  color: $yellow;
-  background: $violet;
+  color: $green;
+  background: $yellow;
+  max-width: 800px;
+  margin: auto;
+  min-height: 100vh;
+  font-family: 'Zilla Slab', serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.list {
+  display: block;
+  list-style-type: none;
+  padding: 16px;
+  &__item {
+    background: $darkyellow;
+    min-width: 200px;
+    padding: 16px;
+    margin: 16px;
+  }
+}
+
+
+
+@supports (display:grid) {
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
