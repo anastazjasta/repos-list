@@ -2,12 +2,20 @@
 @import "_variables";
 @import url("https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap");
 
+@mixin center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -17,15 +25,19 @@ body {
   max-width: 800px;
   margin: auto;
   min-height: 100vh;
-  font-family: 'Zilla Slab', serif;
+  font-family: "Zilla Slab", serif;
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding: 32px;
+  @include center;
+}
+
+.form {
+  @include center;
+}
+
+.submit {
 }
 
 .list {
@@ -42,18 +54,15 @@ body {
     text-decoration: none;
     color: $green;
     &:visited {
-      color:  #457e67;
+      color: #457e67;
     }
     &:hover {
       color: $yellow;
     }
-
   }
 }
 
-
-
-@supports (display:grid) {
+@supports (display: grid) {
   .list {
     display: grid;
     grid-template-columns: 1fr 1fr;
