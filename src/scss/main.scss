@@ -38,6 +38,17 @@ body {
     padding: 16px;
     margin: 16px;
   }
+  &__link {
+    text-decoration: none;
+    color: $green;
+    &:visited {
+      color:  #457e67;
+    }
+    &:hover {
+      color: $yellow;
+    }
+
+  }
 }
 
 
