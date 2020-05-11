@@ -9,7 +9,7 @@ fetch('https://api.github.com/users/anastazjasta/repos')
     const {html_url, name} = repo;
     list.innerHTML += 
     `<li class="list__item">
-      <a href="${html_url}">${name}</a>
+      <a class="list__link" href="${html_url}">${name}</a>
     </li>`;
   }
   }) 
