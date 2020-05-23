@@ -17,10 +17,11 @@ button.addEventListener('click', (e) => {
     .then(resp => {
       const repos = resp;
     for (const repo of repos) {
-      const {html_url, name} = repo;
+      const {description, html_url, name} = repo;
       list.innerHTML += 
       `<li class="list__item">
         <a class="list__link" href="${html_url}">${name}</a>
+        <p class="list__description">${description ? description : ""}</p>
       </li>`;
     }
     }) 
