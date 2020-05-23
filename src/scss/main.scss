@@ -1,6 +1,6 @@
 @import "_normalize";
 @import "_variables";
-@import url("https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;700&display=swap');
 
 @mixin center {
   display: flex;
@@ -22,11 +22,10 @@ html {
 body {
   color: $green;
   background: $yellow;
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
   min-height: 100vh;
   font-family: "Zilla Slab", serif;
-  font-size: 15px;
 }
 
 .main {
@@ -42,7 +41,7 @@ body {
   min-width: 150px;
   background: $green;
   color: $yellow;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   border: none;
   border-radius: 3px;
   padding: 16px;
@@ -67,11 +66,11 @@ body {
 
 .label {
 
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 .list {
-  max-width: 600px;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -80,15 +79,16 @@ body {
   padding: 16px;
   &__item {
     flex: 1;
-
+    font-size: 1.2rem;
     background: $darkyellow;
-    min-width: 150px;
+    min-width: 200px;
     padding: 8px 16px;
     margin: 16px;
     border-radius: 3px;
   }
   &__link {
     text-decoration: none;
+    font-weight: 700;
     color: $green;
     &:visited {
       color: $lightgreen;
